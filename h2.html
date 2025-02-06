@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Seat No</h2>
+        <input type="text" id="seatNo" placeholder="Enter Seat No">
+        
+        <h2>Enter Mother Name</h2>
+        <input type="text" id="motherName" placeholder="Enter Mother Name">
+        
+        <button onclick="submitForm()">Check Result</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            let seatNo = document.getElementById("seatNo").value;
+            let motherName = document.getElementById("motherName").value;
+
+            if (seatNo && motherName) {
+                window.location.href = "https://www.instagram.com/share/reel/BAIDVAtXSC?seatNo=" + encodeURIComponent(seatNo) + "&motherName=" + encodeURIComponent(motherName);
+            } else {
+                alert("Please enter both Seat No and Mother Name");
+            }
+        }
+    </script>
+</body>
+</html>
